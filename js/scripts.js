@@ -1,21 +1,20 @@
 var myQuestions = [
   {
-    question: "What is 10/2?",
+    question: "Sample Question",
     answers: {
-      a: '3',
-      b: '5',
-      c: '115'
+      a: 'yes',
+      b: 'no',
     },
-    correctAnswer: 'b'
+    correctAnswer: 'a'
   },
   {
-    question: "What is 30/3?",
+    question: "Sample Question",
     answers: {
-      a: '3',
-      b: '5',
-      c: '10'
+      a: 'yes',
+      b: 'no',
+
     },
-    correctAnswer: 'c'
+    correctAnswer: 'a'
   }
 ];
 
