@@ -5,9 +5,9 @@ function hideResult() {
 }
 
 
-var myQuestions = [
+let myQuestions = [
   {
-    question: "Sample Question",
+    question: "Do you think JavaScript sounds cool?",
     answers: {
       YES: '',
       NO: '',
@@ -15,27 +15,17 @@ var myQuestions = [
     correctAnswer: 'YES'
   },
   {
-    question: "Sample Question",
+    question: "Who would win in a fight a grizzly bear or a lion?",
     answers: {
-      YES: '',
-      NO: '',
+      GrizzlyBear: '',
+      Lion: '',
 
     },
-    correctAnswer: 'YES'
+    correctAnswer: 'GrizzlyBear'
   },
 
   {
-    question: "Sample Question",
-    answers: {
-      YES: '',
-      NO: '',
-
-    },
-    correctAnswer: 'YES'
-  },
-
-  {
-    question: "Sample Question",
+    question: "Python is a cool name for a language?",
     answers: {
       YES: '',
       NO: '',
@@ -45,19 +35,29 @@ var myQuestions = [
   },
 
   {
-    question: "Sample Question",
+    question: "Do you thing C# will be easy to learn?",
     answers: {
       YES: '',
       NO: '',
 
     },
     correctAnswer: 'YES'
+  },
+
+  {
+    question: "Which do you like more cats or dogs?",
+    answers: {
+      Dogs: '',
+      Cats: '',
+
+    },
+    correctAnswer: 'Dogs'
   }
 ];
 
-var quizContainer = document.getElementById('quiz');
-var resultsContainer = document.getElementById('results');
-var submitButton = document.getElementById('submit');
+let quizContainer = document.getElementById('quiz');
+let resultsContainer = document.getElementById('results');
+let submitButton = document.getElementById('submit');
 
 generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
@@ -67,10 +67,10 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
   function showQuestions(questions, quizContainer){
 
-    var output = [];
-    var answers;
+    let output = [];
+    let answers;
 
-    for(var i=0; i<questions.length; i++){
+    for(let i=0; i<questions.length; i++){
       
       answers = [];
 
@@ -97,32 +97,32 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
   function showResults(questions, quizContainer, resultsContainer){
     
-    var answerContainers = quizContainer.querySelectorAll('.answers');
+    let answerContainers = quizContainer.querySelectorAll('.answers');
     
 
-    var userAnswer = '';
-    var numCorrect = 0;
+    let userAnswer = '';
+    let numCorrect = 0;
     
-    for(var i=0; i<questions.length; i++){
+    for(let i=0; i<questions.length; i++){
 
       userAnswer = (answerContainers[i].querySelector('input[name=question'+i+']:checked')||{}).value;
       
       if(userAnswer===questions[i].correctAnswer){
         numCorrect++;
         
-        answerContainers[i].style.color = 'lightgreen';
+        // answerContainers[i].style.color = 'lightgreen';
       }
 
-      else{
-        answerContainers[i].style.color = 'red';
-      }
+      // else{
+      //   answerContainers[i].style.color = 'red';
+      // }
     }
 
-    if(numCorrect >> 3){
+    if(numCorrect >= 4 ){
       document.getElementById("js").removeAttribute("class");
     } else if (numCorrect == 3) {
       document.getElementById("c#").removeAttribute("class");
-    } else if (numCorrect << 3){
+    } else if (numCorrect <= 2){
       document.getElementById("python").removeAttribute("class");
     };
   }
