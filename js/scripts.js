@@ -9,10 +9,10 @@ let myQuestions = [
   {
     question: "Do you think JavaScript sounds cool?",
     answers: {
-      YES: '',
-      NO: '',
+      Yes: '',
+      No: '',
     },
-    correctAnswer: 'YES'
+    correctAnswer: 'Yes'
   },
   {
     question: "Who would win in a fight a grizzly bear or a lion?",
@@ -27,21 +27,20 @@ let myQuestions = [
   {
     question: "Python is a cool name for a language?",
     answers: {
-      YES: '',
-      NO: '',
-
+      Yes: '',
+      No: '',
     },
-    correctAnswer: 'YES'
+    correctAnswer: 'Yes'
   },
 
   {
     question: "Do you thing C# will be easy to learn?",
     answers: {
-      YES: '',
-      NO: '',
+      Yes: '',
+      No: '',
 
     },
-    correctAnswer: 'YES'
+    correctAnswer: 'Yes'
   },
 
   {
