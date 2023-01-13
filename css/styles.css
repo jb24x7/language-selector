@@ -50,4 +50,8 @@ body{
 
 h1 {
   font-size: 40px;
+  border: 4px solid black;
+  background-color: black;
+  color: #fff;
+  padding-left: 10px;
 }
