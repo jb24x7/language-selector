@@ -108,13 +108,9 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
       
       if(userAnswer===questions[i].correctAnswer){
         numCorrect++;
-        
-        // answerContainers[i].style.color = 'lightgreen';
+
       }
 
-      // else{
-      //   answerContainers[i].style.color = 'red';
-      // }
     }
 
     if(numCorrect >= 4 ){
