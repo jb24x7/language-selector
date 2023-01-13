@@ -125,6 +125,7 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
   showQuestions(questions, quizContainer);
   
   submitButton.onclick = function(){
+    hideResult();
     showResults(questions, quizContainer, resultsContainer);
   }
 
