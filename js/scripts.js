@@ -52,7 +52,27 @@ let myQuestions = [
 
     },
     correctAnswer: 'Dogs'
-  }
+  },
+
+  {
+    question: "Is Ruby a coding language and a gem?",
+    answers: {
+      Yes: '',
+      No: '',
+
+    },
+    correctAnswer: 'Yes'
+  },
+
+  {
+    question: "Waffles or pancakes?",
+    answers: {
+      Waffles: '',
+      Pancakes: '',
+
+    },
+    correctAnswer: 'Waffles'
+  },
 ];
 
 let quizContainer = document.getElementById('quiz');
