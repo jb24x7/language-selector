@@ -1,7 +1,7 @@
 function hideResult() {
-  document.getElementById("moderate").setAttribute("class", "hidden");
-  document.getElementById("liberal").setAttribute("class", "hidden");
-  document.getElementById("conservative").setAttribute("class", "hidden");
+  document.getElementById("js").setAttribute("class", "hidden");
+  document.getElementById("c#").setAttribute("class", "hidden");
+  document.getElementById("python").setAttribute("class", "hidden");
 }
 
 
@@ -63,6 +63,8 @@ generateQuiz(myQuestions, quizContainer, resultsContainer, submitButton);
 
 function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
+  hideResult();
+
   function showQuestions(questions, quizContainer){
 
     var output = [];
@@ -116,9 +118,13 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
       }
     }
 
-    if(numCorrect >>3){
-
-    }
+    if(numCorrect >> 3){
+      document.getElementById("js").removeAttribute("class");
+    } else if (numCorrect == 3) {
+      document.getElementById("c#").removeAttribute("class");
+    } else if (numCorrect << 3){
+      document.getElementById("python").removeAttribute("class");
+    };
   }
 
   showQuestions(questions, quizContainer);
