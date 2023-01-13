@@ -2,6 +2,7 @@ function hideResult() {
   document.getElementById("js").setAttribute("class", "hidden");
   document.getElementById("c#").setAttribute("class", "hidden");
   document.getElementById("python").setAttribute("class", "hidden");
+  document.getElementById("ruby").setAttribute("class", "hidden");
 }
 
 
@@ -117,9 +118,11 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
       document.getElementById("js").removeAttribute("class");
     } else if (numCorrect == 3) {
       document.getElementById("c#").removeAttribute("class");
-    } else if (numCorrect <= 2){
+    } else if (numCorrect <= 2 && numCorrect >= 1){
       document.getElementById("python").removeAttribute("class");
-    };
+    } else if (numCorrect == 0){
+      document.getElementById("ruby").removeAttribute("class");
+    }
   }
 
   showQuestions(questions, quizContainer);
