@@ -134,13 +134,13 @@ function generateQuiz(questions, quizContainer, resultsContainer, submitButton){
 
     }
 
-    if(numCorrect >= 4 ){
+    if(numCorrect >= 6 ){
       document.getElementById("js").removeAttribute("class");
-    } else if (numCorrect == 3) {
+    } else if (numCorrect >= 4 & numCorrect <= 5) {
       document.getElementById("c#").removeAttribute("class");
-    } else if (numCorrect <= 2 && numCorrect >= 1){
+    } else if (numCorrect <= 3 && numCorrect >= 2){
       document.getElementById("python").removeAttribute("class");
-    } else if (numCorrect == 0){
+    } else if (numCorrect <= 1){
       document.getElementById("ruby").removeAttribute("class");
     }
   }
