@@ -11,7 +11,7 @@ By James Provance
 A page with a survey to help you find what coding languages you should learn.
 
 ## Setup
-* Open https://jb24x7.github.language-selector/ in your browser.
+* Open https://jb24x7.github.io/language-suggester/ in your browser.
 * Fill out survey
 * Enjoy
 
